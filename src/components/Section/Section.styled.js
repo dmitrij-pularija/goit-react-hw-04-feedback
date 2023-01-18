@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 530px;
-  margin: 0 auto;
-  padding: 0 15px;
+  width: 100%;
 `;
 export const Title = styled.h2`
-  margin-bottom: 10px;
+  text-align: center;
+  font-size: 32px;
+  color: #468ef1;
 `;
