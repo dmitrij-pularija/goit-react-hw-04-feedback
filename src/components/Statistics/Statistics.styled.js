@@ -24,5 +24,5 @@ export const Row = styled.tr`
 export const Feedback = styled.h3`
   margin-top: 20px;
   text-align: center;
-  color: #33a04a;
+  color: #48AE2C;
 `;

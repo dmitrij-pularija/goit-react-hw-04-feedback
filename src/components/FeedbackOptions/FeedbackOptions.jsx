@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Button, Box, Icon } from './FeedbackOptions.styled';
 import good from '../../img/good.svg';
 import neutral from '../../img/neutral.svg';
@@ -14,9 +14,9 @@ const FeedbackOptions = ({ feedbacks, handleClick }) => {
           name={feedback}
           key={feedback}
         >
-          {feedback === 'good' && <Icon src={good} />}
-          {feedback === 'neutral' && <Icon src={neutral} />}
           {feedback === 'bad' && <Icon src={bad} />}
+          {feedback === 'neutral' && <Icon src={neutral} />}
+          {feedback === 'good' && <Icon src={good} />}
         </Button>
       ))}
     </Box>
@@ -24,8 +24,8 @@ const FeedbackOptions = ({ feedbacks, handleClick }) => {
 };
 
 FeedbackOptions.propTypes = {
-  feedbacks: propTypes.arrayOf(propTypes.string).isRequired,
-  handleClick: propTypes.func.isRequired,
+  feedbacks: PropTypes.arrayOf(PropTypes.string).isRequired,
+  handleClick: PropTypes.func.isRequired,
 };
 
 export default FeedbackOptions;

@@ -7,9 +7,9 @@ import Notification from './Notification/Notification';
 
 class App extends Component {
   state = {
-    good: 0,
-    neutral: 0,
     bad: 0,
+    neutral: 0,
+    good: 0,
   };
 
   handleClick = (event) => {
@@ -38,7 +38,7 @@ class App extends Component {
         </Section>
         <Section title={'Statistics'}>
         {total > 0 ?  
-        <Statistics good={good} neutral={neutral} bad={bad} total={total} positivePercentage={positivePercentage} />
+        <Statistics  bad={bad} neutral={neutral} good={good} total={total} positivePercentage={positivePercentage} />
         :
         <Notification message="There is no feedback" />
         }

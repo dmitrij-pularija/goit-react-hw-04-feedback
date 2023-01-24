@@ -7,7 +7,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e9eef3;
 }
 
 code {
@@ -48,7 +47,6 @@ img {
   padding: 0 15px;
 }
 
-
 th,
 td {
   width: calc(100% / 4);
@@ -58,5 +56,3 @@ th:not(:last-child),
 td:not(:last-child) {
   border-right: 1px solid #dcdbdb;
 }
-
-
