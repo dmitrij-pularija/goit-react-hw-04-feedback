@@ -1,3 +1,3 @@
-goit-react-hw-02-feedback
+goit-react-hw-04-feedback
 
-https://dmitrij-pularija.github.io/goit-react-hw-02-feedback/
+https://dmitrij-pularija.github.io/goit-react-hw-04-feedback/

@@ -7,7 +7,7 @@ const Container = ({ children }) => {
     <Cont>
       <Logo>
         <Icon src={logo} />
-        React feedback
+        React
       </Logo>
       <Card>{children}</Card>
     </Cont>
