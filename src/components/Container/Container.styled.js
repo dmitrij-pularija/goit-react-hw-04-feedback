@@ -7,6 +7,7 @@ export const Cont = styled.div`
 `;
 
 export const Card = styled.div`
+position: relative;
   display: block;
   height: 500px;
   margin-top: 80px;
@@ -43,4 +44,26 @@ animation: App-logo-spin infinite 20s linear;
   to {
     transform: rotate(360deg);
   }
+`;
+
+export const Clear = styled.button`
+position: absolute;
+top: 10px;
+  right: 10px;
+  background-color: inherit;
+  border: 1px solid #212121;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+  &:focus,
+  &:hover {
+    transform: scale(1.05);
+  }
+`;
+
+export const IconClear = styled.img`
+  pointer-events: none;
 `;

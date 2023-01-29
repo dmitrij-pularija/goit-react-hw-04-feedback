@@ -21,6 +21,7 @@ export const Vol = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 8px;
+  font-weight: 700;
   font-size: 18px;
   color: #48ae2c;
 `;
