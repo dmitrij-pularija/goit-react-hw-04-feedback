@@ -7,7 +7,7 @@ export const Cont = styled.div`
 `;
 
 export const Card = styled.div`
-position: relative;
+  position: relative;
   display: block;
   height: 500px;
   margin-top: 80px;
@@ -47,8 +47,8 @@ animation: App-logo-spin infinite 20s linear;
 `;
 
 export const Clear = styled.button`
-position: absolute;
-top: 10px;
+  position: absolute;
+  top: 10px;
   right: 10px;
   background-color: inherit;
   border: 1px solid #212121;
