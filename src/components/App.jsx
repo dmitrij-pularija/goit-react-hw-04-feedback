@@ -6,57 +6,28 @@ import Statistics from './Statistics/Statistics';
 import Notification from './Notification/Notification';
 
 const App = () => {
-  const feedbacks = ['good', 'neutral', 'bad'];
-  const [good, setGood] = useState(0);
-  const [neutral, setNeutral] = useState(0);
-  const [bad, setBad] = useState(0);
+  const [feedback, setFeedback] = useState({ good: 0, neutral: 0, bad: 0 });
 
-  const handleClick = ({ target: { name } }) => {
-    switch (name) {
-      case 'good':
-        setGood(prevState => prevState + 1);
-        break;
-      case 'neutral':
-        setNeutral(prevState => prevState + 1);
-        break;
-      case 'bad':
-        setBad(prevState => prevState + 1);
-        break;
-      default:
-        break;
-    }
+  const handleClick = ({ target: { name } }) =>
+    setFeedback(prevState => {
+      const value = prevState[name];
+      return { ...prevState, [name]: value + 1 };
+    });
+
+  const clearForm = () => setFeedback({ good: 0, neutral: 0, bad: 0 });
+
+  const countPercentage = fidbackName => {
+    if (!total) return 0;
+    return Math.round((feedback[fidbackName] * 100) / total);
   };
 
-  const clearForm = () => {
-    setGood(0);
-    setNeutral(0);
-    setBad(0);
-  };
-
-  const countTotalFeedback = () => {
-    return good + neutral + bad;
-  };
-
-  const countPercentageGood = () => {
-    if (!good) return 0;
-    return Math.round((good * 100) / total);
-  };
-
-  const countPercentageNeutral = () => {
-    if (!neutral) return 0;
-    return Math.round((neutral * 100) / total);
-  };
-
-  const countPercentageBad = () => {
-    if (!bad) return 0;
-    return Math.round((bad * 100) / total);
-  };
-
-  const total = countTotalFeedback();
-  const positivePercentage = countPercentageGood();
-  const neutralPercentage = countPercentageNeutral();
-  const badPercentage = countPercentageBad();
-
+  const { good, neutral, bad } = feedback;
+  const total = good + neutral + bad;
+  const positivePercentage = countPercentage('good');
+  const neutralPercentage = countPercentage('neutral');
+  const badPercentage = countPercentage('bad');
+  const feedbacks = Object.keys(feedback);
+  
   return (
     <Container onClear={clearForm}>
       <Section title={'Please leave feedback'}>
